@@ -1,0 +1,10 @@
+<h1>Projects</h1>
+<ul>
+    <% @projects.each do |project| %>
+        <li>
+            <%= project.name %> <br>
+            <%= project.idea %> <br>
+            <b><em> Using: <%= project.tools %> </em></b><br>
+        </li>
+    <% end %>
+</ul>
