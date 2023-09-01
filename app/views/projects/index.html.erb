@@ -2,9 +2,12 @@
 <ul>
     <% @projects.each do |project| %>
         <li>
-            <%= project.name %> <br>
+            <%= link_to project.name, project %>
             <%= project.idea %> <br>
             <b><em> Using: <%= project.tools %> </em></b><br>
         </li>
     <% end %>
 </ul>
+<div>
+    <a href="/projects/new">Create new</a>
+</div>
