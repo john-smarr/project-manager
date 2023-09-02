@@ -1,0 +1,26 @@
+<%= form_with model: project do |form| %>
+    <div>
+        <%= form.label :name %><br>
+        <%= form.text_field :name %>
+        <% project.errors.full_messages_for(:name).each do |message| %>
+            <div><%= message %></div>
+        <% end %>
+    </div>
+    <div>
+        <%= form.label :idea %><br>
+        <%= form.text_area :idea %>
+        <% project.errors.full_messages_for(:idea).each do |message| %>
+        <div><%= message %></div>
+        <% end %>
+    </div>
+    <div>
+        <%= form.label :tools %><br>
+        <%= form.text_field :tools %>
+        <% project.errors.full_messages_for(:tools).each do |message| %>
+            <div><%= message %></div>
+        <% end %>
+    </div>
+    <div>
+        <%= form.submit %>
+    </div>
+<% end %>

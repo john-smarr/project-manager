@@ -2,4 +2,8 @@
 
 <p> <%= @project.idea %> </p>
 
+<ul>
+    <li><%= link_to "Edit", edit_project_path(@project) %></li>
+</ul>
+
 <%= link_to "Back", root_path %>

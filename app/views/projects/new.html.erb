@@ -1,22 +1,3 @@
 <h1> Prepare to Create Something Brilliant </h1>
 
-<%= form_with model: @project do |form| %>
-    <div>
-        <%= form.label :name %><br>
-        <%= form.text_field :name %><br>
-        <% @project.errors.full_messages_for(:name).each do |message| %>
-            <div><%= message %></div>
-        <% end %>
-    </div>
-    <div>
-        <%= form.label :idea %><br>
-        <%= form.text_field :idea %><br>
-        <% @project.errors.full_messages_for(:idea).each do |message| %>
-        <div><%= message %></div>
-        <% end %>
-
-    </div>
-    <div>
-        <%= form.submit %>
-    </div>
-<% end %>
+<%= render "form", project: @project %>
